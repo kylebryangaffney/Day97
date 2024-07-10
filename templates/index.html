@@ -1,0 +1,65 @@
+{% extends "base.html" %} {% block title %} Home Page {% endblock %} {% block
+content %}
+<div class="container mt-4">
+  <div class="jumbotron text-center bg-primary text-white">
+    <h1 class="display-4">Welcome to Our Market</h1>
+    <p class="lead">Your one-stop shop for exclusive items!</p>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4 col-md-6 mb-4">
+      <div class="card h-100">
+        <img
+          src="static/images/feature1.jpg"
+          class="card-img-top"
+          alt="Feature 1"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Wide Variety of Items</h5>
+          <p class="card-text">
+            Explore our extensive collection of items available for purchase.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 mb-4">
+      <div class="card h-100">
+        <img
+          src="static/images/feature2.jpg"
+          class="card-img-top"
+          alt="Feature 2"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Secure Transactions</h5>
+          <p class="card-text">
+            Enjoy safe and secure transactions every time you buy or sell an
+            item.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 mb-4">
+      <div class="card h-100">
+        <img
+          src="static/images/feature3.jpg"
+          class="card-img-top"
+          alt="Feature 3"
+        />
+        <div class="card-body">
+          <h5 class="card-title">User-Friendly Interface</h5>
+          <p class="card-text">
+            Navigate our site with ease and manage your account effortlessly.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center mt-4">
+    <a href="{{ url_for('register') }}" class="btn btn-primary btn-lg"
+      >Join Now</a
+    >
+    <a href="{{ url_for('login') }}" class="btn btn-secondary btn-lg">Login</a>
+  </div>
+</div>
+{% endblock %}

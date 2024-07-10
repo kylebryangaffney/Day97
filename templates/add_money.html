@@ -1,0 +1,14 @@
+{% extends "base.html" %} {% block title %}Add Money{% endblock %} {% block
+content %}
+<div class="container">
+  <h1>Add Money to Your Account</h1>
+  <form method="POST" action="{{ url_for('add_money') }}">
+    {{ form.hidden_tag() }}
+    <div class="mb-3">
+      <label for="amount" class="form-label">Amount</label>
+      {{ form.amount(class="form-control", id="amount") }}
+    </div>
+    <div class="mb-3">{{ form.submit(class="btn btn-primary") }}</div>
+  </form>
+</div>
+{% endblock %}
